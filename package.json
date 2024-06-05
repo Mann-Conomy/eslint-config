@@ -1,6 +1,6 @@
 {
   "name": "@mann-conomy/eslint-config",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A sharable ESLint config for the Mann-Conomy Project.",
   "main": "eslint.config.js",
   "files": [
