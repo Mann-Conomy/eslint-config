@@ -1,3 +1,10 @@
+---
+name: "Bug report"
+about: "Report a bug with the ESLint config"
+title: "[BUG] - "
+labels: ["bug"]
+---
+
 ## Describe the bug
 
 Please provide a clear and concise description of the bug. Include any relevant information that might help us understand the issue.

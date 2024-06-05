@@ -1,3 +1,10 @@
+---
+name: "Feature request"
+about: "Request a new rule or feature for the ESLint config"
+title: "[FEATURE] - "
+labels: ["enhancement"]
+---
+
 ## Feature description
 
 Provide a clear and concise description of the feature or improvement you are requesting.
