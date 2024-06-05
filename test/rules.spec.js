@@ -84,7 +84,7 @@ describe("eslint.config.js", () => {
 });
 
 function getConfigRules() {
-    const [ _, custom ] = require("../eslint.config.js");;
+    const [ _, custom ] = require("../eslint.config.js");
 
     return custom.rules;
 }
