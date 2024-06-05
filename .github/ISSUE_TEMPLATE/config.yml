@@ -1,15 +1,5 @@
 blank_issues_enabled: false
-contact_links: []
-issue_templates:
-  - name: "Bug report"
-    description: "Report a bug with the ESLint config"
-    labels: ["bug"]
-    title: "[BUG] - "
-    about: "Use this template to report a bug."
-    file: "bug_report.md"
-  - name: "Feature request"
-    description: "Request a new rule or feature for the ESLint config"
-    labels: ["enhancement"]
-    title: "[FEATURE] - "
-    about: "Use this template to request a new rule or feature."
-    file: "feature_request.md"
+contact_links: 
+  - name: Community discussions
+    url: https://github.com/Mann-Conomy/eslint-config/discussions/categories/q-a
+    about: Please ask and answer questions here.
