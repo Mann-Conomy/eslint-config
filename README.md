@@ -38,7 +38,7 @@ export default [
 ];
 ```
 
-For reference, you can find the complete [eslint config here](https://github.com/Mann-Conomy/eslint-config/blob/main/eslint.config.js).
+For reference, you can find the complete [ESLint config here](https://github.com/Mann-Conomy/eslint-config/blob/main/eslint.config.js).
 
 ## License
 
