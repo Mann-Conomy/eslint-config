@@ -1,4 +1,4 @@
-import { Linter } from "eslint";
+import type { Linter } from "eslint";
 
 declare const _exports: {
     readonly rules: Readonly<Linter.RulesRecord>;
