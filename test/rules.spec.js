@@ -1,17 +1,14 @@
 const { ESLint } = require("eslint");
+const configs = require("../eslint.config.js");
 const { describe, expect, test } = require("@jest/globals");
 
 describe("eslint.config.js", () => {
+    // Create the JavaScript linter using the configs
+    const eslint = createLinter(configs);
+
     test("should return a singlequote error", async() => {
         // Arrange
         const code = createCodeWithSinglequotes();
-
-        const eslint = new ESLint({
-            overrideConfigFile: true,
-            overrideConfig: {
-                rules: getConfigRules()
-            }
-        });
 
         // Act
         const results = await eslint.lintText(code);
@@ -26,13 +23,6 @@ describe("eslint.config.js", () => {
         // Arrange
         const code = createCodeWithMissingSemicolon();
 
-        const eslint = new ESLint({
-            overrideConfigFile: true,
-            overrideConfig: {
-                rules: getConfigRules()
-            }
-        });
-
         // Act
         const results = await eslint.lintText(code);
 
@@ -45,13 +35,6 @@ describe("eslint.config.js", () => {
     test("should return a indention error", async() => {
         // Arrange
         const code = createCodeWithoutIndention();
-
-        const eslint = new ESLint({
-            overrideConfigFile: true,
-            overrideConfig: {
-                rules: getConfigRules()
-            }
-        });
 
         // Act
         const results = await eslint.lintText(code);
@@ -66,13 +49,6 @@ describe("eslint.config.js", () => {
         // Arrange
         const code = createCodeWithoutErrors();
 
-        const eslint = new ESLint({
-            overrideConfigFile: true,
-            overrideConfig: {
-                rules: getConfigRules()
-            }
-        });
-
         // Act
         const results = await eslint.lintText(code);
 
@@ -83,10 +59,15 @@ describe("eslint.config.js", () => {
     });
 });
 
-function getConfigRules() {
-    const [ _, custom ] = require("../eslint.config.js");
+function createLinter(configs) {
+    const { rules } = configs.pop();
 
-    return custom.rules;
+    return new ESLint({
+        overrideConfigFile: true,
+        overrideConfig: {
+            rules
+        }
+    });
 }
 
 function createCodeWithoutErrors() {
