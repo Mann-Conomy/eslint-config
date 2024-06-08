@@ -27,6 +27,9 @@ import config from "@mann-conomy/eslint-config";
 export default [
     ...config,
     {
+        ignores: [
+            "eslint.config.js"
+        ],
         rules: {
             "new-rule": "error"
         }
